@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<head>
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<script src="js/dataframe.js"></script> 
+	<title>
+		Dashboard app
+	</title>
+</head>
+<body>
+<!-- 	<div id = "data">
+		<table id = "data1">
+			
+		</table>
+	</div>
+	<div>
+		<p id = "paragraph"></p>
+		
+	</div>
+
+ -->	<script type="text/javascript">
+	//import DataFrame from 'dataframe-js';
+	var DataFrame = dfjs.DataFrame;	
+
+	DataFrame.fromCSV('Datasets/Open_Space_Boston.csv').then(df => {
+
+		//document.getElementById('data1').innerHTML = df.show();
+
+		let column = df.listColumns();
+		let row = df.toArray();
+		document.write("<div class= 'TableParent'>")
+		document.write("<div class = 'ShowTable'>");
+		document.write("<table>");
+		document.write("<tr>");
+		for(let i =0;i<df.listColumns().length;i++){
+			document.write("<th>"+column[i] +"</th>");	
+		}
+		document.write("</tr>");
+		
+		for(let i =0;i<row.length;i++){
+			document.write("<tr>");
+			let v = row[i];		
+			for(let i =0;i<df.listColumns().length;i++){
+
+				document.write("<td>"+v[i] +"</td>");		
+			}
+			document.write("</tr>");
+		}
+		
+		document.write("</table>");
+		document.write("</div>");
+		document.write("</div>");
+		var g = row[1];
+		console.log(typeof(g));
+		document.getElementById('paragraph').innerHTML = g[1];
+
+	});
+</script>
+</body>
+</html>

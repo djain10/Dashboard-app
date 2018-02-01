@@ -1,0 +1,65 @@
+.ShowTable {
+	/*overflow: scroll;*/
+    border-color: black;
+    position: relative;
+}
+.DropDown{
+    margin-top: 15px;
+}
+.TableParent {
+	position : absolute;
+    border: solid 1px;
+    border-color: black;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#btn_AddFilter {
+    display: none;
+    width: 200px;
+    margin-top: 10px;
+}
+#btn_Statistics {
+    display: none;
+    width: 200px;
+    margin-top: 10px;
+}
+#btn_PlotChart {
+    width: 200px;
+    margin-top: 10px;
+}
+#checkBox {
+    margin-left: 15px;
+}
+body{
+	background-color: #FBFCFC;
+}
+
+h3 {
+	margin-left: 80px;
+	color: #C70039;
+}
+
+.nav {
+    align-content: center;
+    margin-left: 10px;
+}
+
+#filterArea {
+    display: none;
+}
+
+
+table{
+	height: 100px;
+	width: 200px;
+}
+
+
+#statisticsArea {
+    display: none;
+}
+
+.bordered{
+	border: 1px solid black;
+}
